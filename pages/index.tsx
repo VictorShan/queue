@@ -1,9 +1,10 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Test from '../src/Test'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-    </div>
+    <>
+      <Test />
+      <footer></footer>
+    </>
   )
 }

@@ -1,0 +1,17 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{year}/documents {
+    match /quarters/{quarter} {
+      match /courses/{course} {
+        match /sessions/{session} {
+          allow read: if request.auth.uid != null &&
+              request.auth.uid in get(/databases/$(year)/documents/quarters/$(quarter)/courses/$(course)/users/$(user)}).users
+        }
+      }
+    }
+    match /{document=**} {
+      allow read: if request.auth != null;
+      allow write: if false;
+    }
+  }
+}

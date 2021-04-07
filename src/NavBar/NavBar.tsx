@@ -5,13 +5,14 @@ import Form from 'react-bootstrap/Form'
 import FormControl from 'react-bootstrap/FormControl'
 import Button from 'react-bootstrap/Button'
 import React from 'react'
-import Link from 'next/link'
+import { useRouter } from 'next/router'
 import AccountArea from './AccountArea'
 
 export default function NavBar() {
+    const router = useRouter()
     return (
       <Navbar bg="light" expand="sm">
-        <Navbar.Brand href="#home">Queue</Navbar.Brand>
+        <Navbar.Brand onClick={() => router.push("/#home")}>Queue</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">

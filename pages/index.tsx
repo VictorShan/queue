@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <Test />
-      <footer></footer>
+      <footer>Copyright 2021 Victor Shan</footer>
     </>
   )
 }

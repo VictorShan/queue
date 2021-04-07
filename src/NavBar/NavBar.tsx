@@ -6,6 +6,7 @@ import FormControl from 'react-bootstrap/FormControl'
 import Button from 'react-bootstrap/Button'
 import React from 'react'
 import Link from 'next/link'
+import AccountArea from './AccountArea'
 
 export default function NavBar() {
     return (
@@ -28,9 +29,7 @@ export default function NavBar() {
             <FormControl type="text" placeholder="Search" className="mr-sm-2" />
             <Button variant="outline-success">Search</Button>
           </Form>
-          <Link href={"/signIn"}>
-            <Button>Sign In</Button>
-          </Link>
+          <AccountArea />
         </Navbar.Collapse>
       </Navbar>
     )
